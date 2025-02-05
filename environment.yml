@@ -1,0 +1,16 @@
+name: tttlm_env
+channels:
+  - conda-forge
+  - defaults
+  - nvidia
+dependencies:
+  - python=3.9
+  - numpy
+  - transformers
+  - matplotlib
+  - tqdm
+  - pip
+  - pip:
+    - torch
+    - faiss-gpu-cu12
+
