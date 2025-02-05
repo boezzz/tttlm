@@ -13,4 +13,5 @@ dependencies:
   - pip:
     - torch
     - faiss-gpu-cu12
+    - sqlitedict
 
