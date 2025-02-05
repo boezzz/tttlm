@@ -69,7 +69,7 @@ Make sure to have the checkpoint `models/roberta-large-pile-lr2e-5-bs16-8gpu/che
 
 ### Download the index
 
-You can download the index files [here](https://edmond.mpdl.mpg.de/dataset.xhtml?persistentId=doi:10.17617/3.EJQGAK). The download size is approximately 800GB. Place the files in the directory `indexes/roberta-large`.
+You can download the index files [here](https://edmond.mpdl.mpg.de/dataset.xhtml?persistentId=doi:10.17617/3.EJQGAK). The download size is approximately 800GB. Place the files in the directory `../../../scrubbed/zby2003/roberta-large`.
 
 ### Alternatively, build the index
 
@@ -78,10 +78,10 @@ To build the index yourself, use the code in `code/build_database.py` to build a
 ```
 python3 code/build_database.py \
         --data_file pile/train/00.jsonl \
-        --output_dir indexes/roberta-large
+        --output_dir ../../../scrubbed/zby2003/roberta-large
 ```
 
-Make sure you have all index files in `indexes/roberta-large` before you proceed.
+Make sure you have all index files in `../../../scrubbed/zby2003/roberta-large` before you proceed.
 
 ## Run the Pile server
 

@@ -138,12 +138,16 @@ def build_roberta_index(data_file : str):
         Pile index.
     """
 
-    data_path = os.path.join('pile/train', data_file)
-    index_path = os.path.join('indexes/roberta-large',
+    data_path = os.path.join('../../../../data/pile/train', data_file)
+    index_path = os.path.join('../../../scrubbed/zby2003/roberta-large',
                               data_file + '.index')
+    print(index_path)
     assert os.path.exists(data_path)
     assert os.path.exists(index_path)
+
+    # this needs very large memory!
     index, data_dict = build_index(data_path, index_path)
+    print("finished buidling index")
     return PileIndex(index, data_dict)
 
 
