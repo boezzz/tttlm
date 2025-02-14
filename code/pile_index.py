@@ -12,7 +12,7 @@ from tqdm import tqdm
 class PileIndex:
     """Nearest neighbor index."""
 
-    def __init__(self, index : faiss.IndexFlatL2, data_dict : dict,
+    def __init__(self, index : faiss.IndexFlatL2,data_path : str, offset_path : str,
                                                   embedding_model=None):
         """Initialize pile index.
         
@@ -32,14 +32,45 @@ class PileIndex:
         PileIndex
             Pile nearest neighbor index.
         """
+        # Extract dimensions and number of vectors
+        #d = index.d
+        #ntotal = index.ntotal
 
+        #nlist = max(100, int(np.sqrt(ntotal)))  # Adjust based on dataset size
+        #m = 8        # Number of PQ subquantizers
+        #bits = 8     # Bits per subvector
+
+        # Step 2: Create IVF-PQ index
+        #quantizer = faiss.IndexFlatL2(d)  # Flat index as coarse quantizer
+        #ivfpq_index = faiss.IndexIVFPQ(quantizer, d, nlist, m, bits)
+
+        # Step 3: Extract vectors from IndexFlatL2 and train IVF-PQ
+        #vectors = np.array([index.reconstruct(i) for i in range(index.ntotal)]).astype('float32')
+        #ivfpq_index.train(vectors)
         self.index = index
-        self.data_dict = data_dict
-        assert len(self.data_dict) == self.index.ntotal
+        #self.data_dict = data_dict
+        # is this necessary??
+        #assert len(self.data_dict) == self.index.ntotal
+
+        self.data_path = data_path
+        self.data_file =  open(self.data_path, "r")
+        self.offset_path = offset_path
+
+        # Load index file once into memory (avoiding repeated reads)
+        with open(self.offset_path, "r") as offset_file:
+            self.offsets = np.array([int(line.strip()) for line in offset_file])
+
 
         self.embedding_model = embedding_model
         if self.embedding_model is not None:
             assert hasattr(self.embedding_model, 'embedding_dimension')
+
+    def get_json_object(self,line_index):
+        self.data_file.seek(self.offsets[line_index])  # Jump to byte offset
+        read = self.data_file.readline().strip()
+        return json.loads(read)["text"]  # Read the JSON object
+
+
 
     def vector_query(self, query_vector : np.ndarray, num_neighbors : int):
         """Nearest neighbor vector query.
@@ -56,14 +87,11 @@ class PileIndex:
         np.ndarray, List[str]
             Pair of vectors and data items.
         """
-
         assert self.index.d == query_vector.shape[1]
-
         results = self.index.search_and_reconstruct(query_vector, num_neighbors)
         neighbors = results[1].reshape(num_neighbors)
         vectors = results[2].reshape(num_neighbors, -1)
-        data_items = [self.data_dict[i] for i in neighbors]
-
+        data_items = [self.get_json_object(i) for i in neighbors]
         return vectors, data_items
 
     def string_query(self, query_str : str, num_neighbors : int):
@@ -106,12 +134,11 @@ def data_to_dict(data_path : str):
     """
 
     print('Reading data file: ', data_path)
-
     texts = []
     with open(data_path, 'r') as data_file:
         for line in tqdm(data_file):
             texts.append(json.loads(line)['text'])
-
+    
     return dict(zip(range(len(texts)), texts))
 
 
@@ -121,7 +148,7 @@ def build_index(data_path : str, index_path : str):
     index = faiss.read_index(index_path)
     data_dict = data_to_dict(data_path)
 
-    return index, data_dict
+    return index,data_dict
 
 
 def build_roberta_index(data_file : str):
@@ -141,10 +168,12 @@ def build_roberta_index(data_file : str):
     data_path = os.path.join('pile/train', data_file)
     index_path = os.path.join('indexes/roberta-large',
                               data_file + '.index')
+    offset_path = os.path.join('offsets/', 
+                              data_file[:-6] + '.index')
     assert os.path.exists(data_path)
     assert os.path.exists(index_path)
-    index, data_dict = build_index(data_path, index_path)
-    return PileIndex(index, data_dict)
+    index = faiss.read_index(index_path)
+    return PileIndex(index, data_path, offset_path)
 
 
 def split_index_data(pile_index : PileIndex, num_splits : int):

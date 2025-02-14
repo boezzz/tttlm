@@ -17,7 +17,7 @@ def parse_args():
     parser.add_argument('--num_servers', type=int, default=1)
     parser.add_argument('--password', type=str, default='ReTraP server.')
     parser.add_argument('--address_path', type=str, default='servers/addresses.txt')
-    parser.add_argument('--data_file', type=str, default='pile/train/00.jsonl')
+    parser.add_argument('--data_file', type=str, default='00.jsonl')
     parser.add_argument('--logging_level', type=str, default='DEBUG')
     parser.add_argument('--timeout', type=int, default=10)
     return parser.parse_args()
@@ -63,6 +63,7 @@ class PileServer(Process):
         try:
             if connection.poll(self._timeout):
                 query = connection.recv()
+                logging.debug("query recieved")
             else:
                 logging.warning(f'{self._server_name} timed out waiting for '\
                                 'query. Closing connection.')
@@ -80,8 +81,8 @@ class PileServer(Process):
             self._listener.close()
             connection.close()
             return False
-
         result = self._pile_index.vector_query(*query)
+
         try:
             connection.send(result)
         except Exception as e:

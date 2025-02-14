@@ -8,6 +8,7 @@ import argparse
 import random
 import json
 import faiss
+import numpy as np
 
 import multiprocess
 from multiprocessing.connection import Client
@@ -58,7 +59,7 @@ class PileClient:
         if self.embedding_model is not None:
             assert hasattr(self.embedding_model, 'embedding_dimension')
 
-    def _fetch_results(self, query):
+    def _fetch_results(self,query):
         """Fetch results from multiple servers with timeout.
 
         Parameters
@@ -107,6 +108,11 @@ class PileClient:
 
         return results
 
+    def vector_query(self, query_vector, num_neighbors):
+        query = (query_vector, num_neighbors)
+        results = self._fetch_results(query)
+        return results
+
     def string_query(self, query_string: str, num_neighbors: int):
         """Nearest neighbor string query.
         
@@ -125,20 +131,7 @@ class PileClient:
 
         assert self.embedding_model
         query_vector = self.embedding_model([query_string]).cpu().numpy()
-        query = (query_vector, num_neighbors)
-        results = self._fetch_results(query)
-    
-        dimension = results[0][0].shape[1]
-        results_index = faiss.IndexFlatL2(dimension)
-    
-        results_items = []
-        for vectors, data_items in results:
-            results_index.add(vectors)
-            results_items += data_items
-        results_data_dict = {i: item for (i, item) in enumerate(results_items)}
-    
-        index = PileIndex(results_index, results_data_dict)
-        return index.vector_query(query_vector, num_neighbors)
+        return self.vector_query(query_vector,num_neighbors)
 
 
 def get_addresses_from_file(address_path):
@@ -231,12 +224,32 @@ def roberta_client(address_path='addresses.txt',
     embedding_model = RobertaEmbedding(embedding_model_checkpoint, 'cuda')
     return PileClient(address_path, password, embedding_model=embedding_model)
 
+def _test_server_random_queries(address_path, password, num_queries=1000):
+    """Test server with random one nearest neighbor queries."""
+
+    client = PileClient(address_path, password)
+    queries = np.random.rand(num_queries,1, 1024)
+
+    correct = 0
+    total_query_time = 0.0
+
+    for q in queries:
+        start_time = time.time()
+        data = client.vector_query(q, 5)
+        retrieved = data[0]
+        query_time = time.time() - start_time
+        total_query_time += query_time
+        logging.info('Query time: %.2f', query_time)
+        logging.warning('Retrieved: %s', retrieved[:100])
+    logging.info('Average query time: %.2f', total_query_time / num_queries)
+
+
 
 def _test_server(address_path, password, num_queries=1000):
     """Test server with random one nearest neighbor queries."""
 
     client = roberta_client(address_path, password)
-    data_path = 'pile/train/01.jsonl'
+    data_path = 'pile/train/00.jsonl'
 
     logging.debug('Reading data from %s', data_path)
     with open(data_path, 'r') as data_file:
@@ -305,15 +318,18 @@ if __name__ == '__main__':
 
     if args.probe_servers:
         probe_servers(args.address_path, password)
+        pc = PileClient(address_path='servers/addresses.txt',
+                   password=b'ReTraP server.')
         exit()
 
     if args.shutdown:
         shutdown_servers(args.address_path, password)
         exit()
-
+    
     if args.test:
-        _test_server_parallel_queries(args.address_path, password)
-        _test_server(args.address_path, password)
+        _test_server_random_queries(args.address_path,password)
+        #_test_server_parallel_queries(args.address_path, password)
+        #_test_server(args.address_path, password)
         exit()
 
     client = roberta_client(args.address_path, password, args.embedding_model_checkpoint)
