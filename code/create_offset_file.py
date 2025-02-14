@@ -7,7 +7,7 @@ from tqdm import tqdm
 def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser()
-    parser.add_argument('--index_path', type=str, default='indices/00.index')
+    parser.add_argument('--index_path', type=str, default='offsets/00.index')
     parser.add_argument('--data_file', type=str, default='pile/train/00.jsonl')
     return parser.parse_args()
 
