@@ -284,7 +284,7 @@ def _test_server_parallel_queries(address_path, password, num_queries=1000):
     """Test server with parallel queries."""
 
     client = roberta_client(address_path, password)
-    data_path = 'pile/train/01.jsonl'
+    data_path = '../../../../data/pile/train/01.jsonl'
 
     logging.debug('Reading data from %s', data_path)
     with open(data_path, 'r') as data_file:

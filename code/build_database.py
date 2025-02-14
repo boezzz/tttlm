@@ -19,8 +19,8 @@ def parse_args():
     parser.add_argument('--embedding_model_checkpoint', type=str,
                         default='models/roberta-large-pile-lr2e-5-bs16-8gpu/checkpoint-1700000')
     parser.add_argument('--data_file', type=str, default='00.jsonl')
-    parser.add_argument('--data_dir', type=str, default='pile/train')
-    parser.add_argument('--output_dir', type=str, default='indexes/roberta-large')
+    parser.add_argument('--data_dir', type=str, default='../../../../data/pile/train')
+    parser.add_argument('--output_dir', type=str, default='../../../scrubbed/zby2003/roberta-large')
     parser.add_argument('--batch_size', type=int, default=16)
     parser.add_argument('--device', type=str, default='cuda')
     parser.add_argument('--begin', type=int, default=0)

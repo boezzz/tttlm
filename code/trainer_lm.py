@@ -26,8 +26,8 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--do_train', action='store_true')
     parser.add_argument('--do_eval', action='store_true')
-    parser.add_argument('--training_dir', type=str, default='pile/train')
-    parser.add_argument('--eval_file', type=str, default='pile/val.jsonl')
+    parser.add_argument('--training_dir', type=str, default='../../../../data/pile/train')
+    parser.add_argument('--eval_file', type=str, default='../../../../data/pile/val.jsonl')
     parser.add_argument('--max_steps', type=int, default=8E6)
     parser.add_argument('--logging_steps', type=int, default=100)
     parser.add_argument('--save_steps', type=int, default=5000)
@@ -45,8 +45,8 @@ def parse_args():
     return parser.parse_args()
 
 
-def train_eval_datasets(tokenizer, pile_training_dir='pile/train',
-                                   pile_eval_file='pile/val.jsonl',
+def train_eval_datasets(tokenizer, pile_training_dir='../../../../data/pile/train',
+                                   pile_eval_file='../../../../data/pile/val.jsonl',
                                    masked_lm=True,
                                    mask_probability=0.15,
                                    random_seed=42):

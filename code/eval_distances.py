@@ -21,7 +21,7 @@ def distances_to_nns(address_path, results_dir, num_queries=10000, num_neighbors
 
     multiprocessing.log_to_stderr(logging.DEBUG)
 
-    data_path = 'pile/val.jsonl'
+    data_path = '../../../../data/pile/val.jsonl'
     logging.debug('Reading data from %s', data_path)
 
     lines = []

@@ -9,8 +9,13 @@ dependencies:
   - transformers
   - matplotlib
   - tqdm
+  - scikit-learn
   - pip
   - pip:
     - torch
     - faiss-gpu-cu12
+    - sqlitedict
+    - sacrebleu
+    - pycountry
+    - rouge-score
 
