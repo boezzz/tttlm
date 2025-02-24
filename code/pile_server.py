@@ -63,6 +63,7 @@ class PileServer(Process):
         try:
             if connection.poll(self._timeout):
                 query = connection.recv()
+                logging.debug("query recieved")
             else:
                 logging.warning(f'{self._server_name} timed out waiting for '\
                                 'query. Closing connection.')
@@ -80,8 +81,8 @@ class PileServer(Process):
             self._listener.close()
             connection.close()
             return False
-
         result = self._pile_index.vector_query(*query)
+
         try:
             connection.send(result)
         except Exception as e:
