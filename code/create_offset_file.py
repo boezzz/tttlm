@@ -25,8 +25,6 @@ def write_offset_file(filename):
             offset += len(line)  # Store byte position
 
 
-
-
 if __name__ == '__main__':
 
     args = parse_args()
@@ -37,4 +35,5 @@ if __name__ == '__main__':
                 write_offset_file(filename)
     else:
         write_offset_file(args.filename)
+    
     
