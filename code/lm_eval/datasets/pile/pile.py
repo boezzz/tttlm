@@ -97,8 +97,8 @@ class Pile(datasets.GeneratorBasedBuilder):
         )
 
     def _split_generators(self, dl_manager):
-        urls = {"validation": _URLS["validation"], "test": _URLS["test"]}
-        data_dir = dl_manager.download_and_extract(urls)
+        #urls = {"validation": _URLS["validation"], "test": _URLS["test"]}
+        data_dir = {"test":"/data/pile/test.jsonl", "validation":"/data/pile/val.jsonl"}
         return [
             datasets.SplitGenerator(
                 name=datasets.Split.TEST,
