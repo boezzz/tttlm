@@ -13,7 +13,7 @@ import numpy as np
 import multiprocess
 from multiprocessing.connection import Client
 
-from pile_index import PileIndex
+from pile_index import PileIndex, OldPileIndex
 from text_embedding import RobertaEmbedding
 
 
@@ -111,7 +111,18 @@ class PileClient:
     def vector_query(self, query_vector, num_neighbors):
         query = (query_vector, num_neighbors)
         results = self._fetch_results(query)
-        return results
+
+        dimension = results[0][0].shape[1]
+        results_index = faiss.IndexFlatL2(dimension)
+    
+        results_items = []
+        for vectors, data_items in results:
+            results_index.add(vectors)
+            results_items += data_items
+        results_data_dict = {i: item for (i, item) in enumerate(results_items)}
+    
+        index = OldPileIndex(results_index, results_data_dict)
+        return index.vector_query(query_vector, num_neighbors)
 
     def string_query(self, query_string: str, num_neighbors: int):
         """Nearest neighbor string query.
@@ -327,9 +338,9 @@ if __name__ == '__main__':
         exit()
     
     if args.test:
-        _test_server_random_queries(args.address_path,password)
-        #_test_server_parallel_queries(args.address_path, password)
-        #_test_server(args.address_path, password)
+        #_test_server_random_queries(args.address_path,password)
+        _test_server_parallel_queries(args.address_path, password)
+        _test_server(args.address_path, password)
         exit()
 
     client = roberta_client(args.address_path, password, args.embedding_model_checkpoint)
