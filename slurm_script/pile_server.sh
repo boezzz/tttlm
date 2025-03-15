@@ -3,9 +3,9 @@
 #SBATCH --output=servers/server-%A-%a.out
 #SBATCH --error=servers/server-%A-%a.err
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=4
+#SBATCH --cpus-per-task=2
 #SBATCH --mem=32G
-#SBATCH --time=4:00:00
+#SBATCH --time=70:00:00
 #SBATCH --array=0-29
 
 # Load any required modules (if applicable)

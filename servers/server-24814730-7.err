@@ -1,0 +1,80 @@
+INFO:root:Server-07-0('10.64.65.67', 46525) listening for connections at: ('10.64.65.67', 46525)
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 52722)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 57874)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 53868)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.98', 48270)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 45624)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 34962)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 43562)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 53230)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 32782)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 50076)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 44220)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 53406)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 38384)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 42038)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 38224)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 54074)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 51380)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 45722)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 36024)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 40392)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 43142)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 43200)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 55750)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.98', 45192)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 33152)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 60040)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 51490)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 39574)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 39478)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 50256)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 39558)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 40680)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 53054)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 56142)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 43062)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 40100)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 52742)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 35374)
+DEBUG:root:query recieved
+DEBUG:root:Server-07-0('10.64.65.67', 46525) accepted connection from ('10.64.77.27', 41816)
+DEBUG:root:query recieved
+slurmstepd: error: *** JOB 24814741 ON n3067 CANCELLED AT 2025-03-12T22:13:31 ***

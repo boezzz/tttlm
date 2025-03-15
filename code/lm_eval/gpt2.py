@@ -16,17 +16,16 @@ class HFLM(BaseLM):
         self._device = torch.device(device)    
         self.gpt2 = model.to(self.device)
         self.gpt2.eval()
-
         self.tokenizer = tokenizer
-        assert isinstance(
-            self.tokenizer,
-            (
-                transformers.GPT2Tokenizer,
-                transformers.GPT2TokenizerFast,
-                transformers.T5Tokenizer,
-                transformers.T5TokenizerFast,
-            ),
-        ), "this tokenizer has not been checked for compatibility yet!"
+        #assert isinstance(
+        #    self.tokenizer,
+        #    (
+        #        transformers.GPT2Tokenizer,
+        #        transformers.GPT2TokenizerFast,
+        #        transformers.T5Tokenizer,
+        #        transformers.T5TokenizerFast,
+        #    ),
+        #), "this tokenizer has not been checked for compatibility yet!"
 
         self.vocab_size = self.tokenizer.vocab_size
 
@@ -39,7 +38,7 @@ class HFLM(BaseLM):
                 198,
                 31373,
             ], self.tokenizer.encode("hello\n\nhello")
-
+        
         # multithreading and batching
         self.batch_size_per_gpu = batch_size  # todo: adaptive batch size
 

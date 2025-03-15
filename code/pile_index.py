@@ -166,7 +166,7 @@ def build_roberta_index(data_file : str):
     """
 
     data_path = os.path.join('../../../../data/pile/train', data_file)
-    index_path = os.path.join('../../../scrubbed/zby2003/roberta-large',
+    index_path = os.path.join('indexes/roberta-large2',
                               data_file + '.index')
     offset_path = os.path.join('offsets/', 
                               data_file[:-6] + '.index')

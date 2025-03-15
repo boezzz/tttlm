@@ -1,0 +1,94 @@
+INFO:root:Server-08-0('10.64.65.240', 40611) listening for connections at: ('10.64.65.240', 40611)
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 51322)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 56014)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 60768)
+--- Logging error ---
+DEBUG:root:query recieved
+--- Logging error ---
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.98', 48912)
+--- Logging error ---
+DEBUG:root:query recieved
+--- Logging error ---
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 43010)
+--- Logging error ---
+DEBUG:root:query recieved
+--- Logging error ---
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 51186)
+--- Logging error ---
+DEBUG:root:query recieved
+--- Logging error ---
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 34926)
+--- Logging error ---
+DEBUG:root:query recieved
+--- Logging error ---
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 54584)
+--- Logging error ---
+DEBUG:root:query recieved
+--- Logging error ---
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 53612)
+--- Logging error ---
+DEBUG:root:query recieved
+--- Logging error ---
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 55798)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 54086)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 33504)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 46130)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 55790)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 42002)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 56482)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 34898)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 39802)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 47098)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 37262)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 56376)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 42916)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 37388)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.98', 50986)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 57246)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 54676)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 59670)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 55136)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 59484)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 59832)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 43434)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 49066)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 52140)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 54974)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 45368)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 56138)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 50236)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 46406)
+DEBUG:root:query recieved
+DEBUG:root:Server-08-0('10.64.65.240', 40611) accepted connection from ('10.64.77.27', 55862)
+DEBUG:root:query recieved
+slurmstepd: error: *** JOB 24814742 ON n3240 CANCELLED AT 2025-03-12T22:13:31 ***

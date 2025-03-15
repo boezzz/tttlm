@@ -1,0 +1,112 @@
+INFO:root:Server-09-0('10.64.65.240', 35291) listening for connections at: ('10.64.65.240', 35291)
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 41492)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 33272)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 49634)
+--- Logging error ---
+DEBUG:root:query recieved
+--- Logging error ---
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.98', 56102)
+--- Logging error ---
+DEBUG:root:query recieved
+--- Logging error ---
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 39030)
+--- Logging error ---
+DEBUG:root:query recieved
+--- Logging error ---
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 60804)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/scrubbed/lindq2/CSE543-Turbulence-proj/mamba_env_test/lib/python3.12/logging/__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+OSError: [Errno 122] Disk quota exceeded
+Call stack:
+  File "/mmfs1/gscratch/scrubbed/lindq2/tttlm/code/pile_server.py", line 140, in <module>
+    server.start()
+  File "/mmfs1/gscratch/scrubbed/lindq2/CSE543-Turbulence-proj/mamba_env_test/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/mmfs1/gscratch/scrubbed/lindq2/CSE543-Turbulence-proj/mamba_env_test/lib/python3.12/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/mmfs1/gscratch/scrubbed/lindq2/CSE543-Turbulence-proj/mamba_env_test/lib/python3.12/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+  File "/mmfs1/gscratch/scrubbed/lindq2/CSE543-Turbulence-proj/mamba_env_test/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/mmfs1/gscratch/scrubbed/lindq2/CSE543-Turbulence-proj/mamba_env_test/lib/python3.12/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+  File "/mmfs1/gscratch/scrubbed/lindq2/CSE543-Turbulence-proj/mamba_env_test/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/mmfs1/gscratch/scrubbed/lindq2/tttlm/code/pile_server.py", line 115, in run
+    while self._step():
+  File "/mmfs1/gscratch/scrubbed/lindq2/tttlm/code/pile_server.py", line 61, in _step
+    logging.debug(f'{self._server_name} accepted connection from '\
+Message: "Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 60804)"
+Arguments: ()
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 53758)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 44384)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 42024)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 44906)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 32850)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 45706)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 46030)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 55484)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 47896)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 58816)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 40468)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 51428)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 60980)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 58544)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 50332)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 35712)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 53224)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.98', 55368)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 51932)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 48404)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 34864)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 52036)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 49732)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 39174)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 39038)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 60418)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 44300)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 42438)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 55148)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 42758)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 58012)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 44782)
+DEBUG:root:query recieved
+DEBUG:root:Server-09-0('10.64.65.240', 35291) accepted connection from ('10.64.77.27', 43274)
+DEBUG:root:query recieved
+slurmstepd: error: *** JOB 24814743 ON n3240 CANCELLED AT 2025-03-12T22:13:31 ***

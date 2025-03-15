@@ -21,12 +21,21 @@ colors = { 'neutral' : 'steelblue',
 
 # six largest tasks, more than 70% of the weight
 # weights come from PILE_WEIGHTS
-pile_top6 = [('pile_github', 7.59),
-             ('pile_arxiv', 8.96),
-             ('pile_openwebtext2', 10.01),
-             ('pile_books3', 12.07),
-             ('pile_pubmed-central', 14.4),
-             ('pile_pile-cc', 18.11)]
+#pile_top6 = [('pile_github', 7.59),
+#             ('pile_arxiv', 8.96),
+#             ('pile_openwebtext2', 10.01),
+#             ('pile_books3', 12.07),
+#             ('pile_pubmed-central', 14.4),
+#             ('pile_pile-cc', 18.11)]
+
+#pile_top6 = [('pile_github', 7.59),
+            # ('pile_dm-mathematics', 8.96),
+            # ('pile_europarl', 10.01),]
+            # ('pile_dm-mathematics',12.07)]
+
+pile_top6 = [("pile_arxiv",0),("pile_books3",0),("pile_wikipedia",0),("pile_github",0),("pile_enron",0), ("pile_dm-mathematics",0), ("pile_europarl",0)]
+
+
 
 
 def parse_args():
@@ -300,8 +309,8 @@ def compute_bootstrap_error_bars(results_dir, metrics, task_name):
 def compute_aggregate_stats(task_names, results_dir, world_size, bootstrap=False):
     """Load results from file and aggregate them."""
 
-    if os.path.exists('%s/aggregate_stats.pth' % (results_dir)):
-        return torch.load('%s/aggregate_stats.pth' % (results_dir))
+    #if os.path.exists('%s/aggregate_stats.pth' % (results_dir)):
+    #    return torch.load('%s/aggregate_stats.pth' % (results_dir))
 
     aggregate_stats = {}
     for task_name in task_names:
@@ -396,7 +405,10 @@ if __name__ == '__main__':
 
     args = parse_args()
 
-    task_names = list(PILE_WEIGHTS.keys())
+    #task_names = list(PILE_WEIGHTS.keys())
+    #task_names = ["pile_arxiv","pile_books3","pile_wikipedia","pile_github","pile_enron", "pile_dm-mathematics", "pile_europarl"]
+    task_names = ["pile_dm-mathematics","pile_github","pile_europarl"] 
+    #task_names = ["pile_dm-mathematics"]
     aggregate_stats = compute_aggregate_stats(task_names, args.results_dir,
                                               args.world_size, bootstrap=args.bootstrap)
     if args.results_dir2 is not None:
@@ -405,17 +417,17 @@ if __name__ == '__main__':
     if args.results_dir3 is not None:
         aggregate_stats3 = compute_aggregate_stats(task_names,
                                                    args.results_dir3, args.world_size)
-    task_names = ['pile_all'] + task_names
+    #task_names = ['pile_all'] + task_names
 
     if args.results_dir2 is not None and args.results_dir3 is not None:
         for task_name in task_names:
             plot_comparisons(args.results_dir, aggregate_stats,
                              aggregate_stats2, aggregate_stats3, task_name)
 
-    plot_curve_top(args.results_dir, aggregate_stats, 'bits_per_byte')
-    plot_curve_top(args.results_dir, aggregate_stats, 'byte_perplexity')
-    plot_curve_top(args.results_dir, aggregate_stats, 'word_perplexity')
-    plot_before_after_top(args.results_dir, aggregate_stats, 'bits_per_byte', args.error_bars)
+    #plot_curve_top(args.results_dir, aggregate_stats, 'bits_per_byte')
+    #plot_curve_top(args.results_dir, aggregate_stats, 'byte_perplexity')
+    #plot_curve_top(args.results_dir, aggregate_stats, 'word_perplexity')
+    #plot_before_after_top(args.results_dir, aggregate_stats, 'bits_per_byte', args.error_bars)
     plot_before_after_all(args.results_dir, aggregate_stats, task_names, 'bits_per_byte',
                           args.error_bars)
     plot_training_costs(args.results_dir, aggregate_stats, task_names)
@@ -429,8 +441,16 @@ if __name__ == '__main__':
         plot_curve(args.results_dir, aggregate_stats, task_name, 'bits_per_byte', xs,
                    xlabel='neighbors')
 
+        plot_curve(args.results_dir, aggregate_stats, task_name, 'word_perplexity', xs,
+                   xlabel='neighbors')
+
+        plot_curve(args.results_dir, aggregate_stats, task_name, 'byte_perplexity', xs,
+                   xlabel='neighbors')
         xs = xs[1:]
         plot_curve(args.results_dir, aggregate_stats, task_name, 'training_loss', xs,
                    xlabel='neighbors')
 
+        
+        print("before:",aggregate_stats[task_name][0]["bits_per_byte"])
+        print("after:",aggregate_stats[task_name][-1]["bits_per_byte"])
         print(task_name, len(xs))

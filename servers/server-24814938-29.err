@@ -1,0 +1,2 @@
+INFO:root:Server-29-0('10.64.66.45', 40003) listening for connections at: ('10.64.66.45', 40003)
+slurmstepd: error: *** JOB 24814938 ON n3301 CANCELLED AT 2025-03-12T22:17:07 ***

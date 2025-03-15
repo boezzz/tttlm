@@ -1,0 +1,82 @@
+INFO:root:Server-20-0('10.64.65.0', 45005) listening for connections at: ('10.64.65.0', 45005)
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 52776)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 55718)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 60820)
+--- Logging error ---
+DEBUG:root:query recieved
+--- Logging error ---
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.98', 55180)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 52712)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 33986)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 49708)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 45890)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 41952)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 37308)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 50338)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 44046)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 53190)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 33020)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 54452)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 34876)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 57224)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 33760)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 52624)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 48386)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 59776)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 60424)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 46530)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.98', 56124)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 40118)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 44700)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 33056)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 39840)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 53188)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 50666)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 36668)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 35884)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 48172)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 53256)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 52004)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 51436)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 52254)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 52242)
+DEBUG:root:query recieved
+DEBUG:root:Server-20-0('10.64.65.0', 45005) accepted connection from ('10.64.77.27', 34284)
+DEBUG:root:query recieved
+slurmstepd: error: *** JOB 24814754 ON n3000 CANCELLED AT 2025-03-12T22:13:31 ***
