@@ -1,4 +1,0 @@
-usage: pile_server.py [-h] [--num_servers NUM_SERVERS] [--password PASSWORD]
-                      [--address_path ADDRESS_PATH] [--data_file DATA_FILE]
-                      [--logging_level LOGGING_LEVEL] [--timeout TIMEOUT]
-pile_server.py: error: argument --data_file: expected one argument
